@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <script>
+      function getUserData() {
+        // Ambil input dari user
+        const name = prompt("Enter your name:");
+        const nim = prompt("Enter your NIM:");
+
+        // Periksa jika input diisi
+        if (name && nim) {
+          // Cek menggunakan alert apakah nilai diterima (ini hanya untuk troubleshooting, bisa dihapus jika tidak diperlukan)
+          //   alert("Name: " + name + "\nNIM: " + nim);
+
+          // Tampilkan di halaman
+          document.getElementById("name").textContent = "Name: " + name;
+          document.getElementById("nim").textContent = "NIM: " + nim;
+        } else {
+          alert("Please fill both Name and NIM!");
+        }
+      }
+    </script>
+  </head>
+  <body onload="getUserData()">
+    <h1>lab Pemograman Berbasis Web</h1>
+    <div class="result">
+      <p id="name">Name:</p>
+      <p id="nim">NIM:</p>
+    </div>
+    <button class="btn" onclick="getUserData()">Input Again</button>
+  </body>
+</html>
